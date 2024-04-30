@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginBottom="9dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/gradient"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ig_gradient"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pfp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mu_pfp"
+            app:layout_constraintStart_toStartOf="@id/gradient"
+            app:layout_constraintBottom_toBottomOf="@id/gradient"
+            app:layout_constraintEnd_toEndOf="@id/gradient"
+            app:layout_constraintTop_toTopOf="@id/gradient"/>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="username"
+            app:layout_constraintStart_toEndOf="@id/gradient"
+            app:layout_constraintTop_toTopOf="@id/gradient"
+            app:layout_constraintBottom_toTopOf="@id/name"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintVertical_chainStyle="packed"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textColor="@color/grey"
+            android:text="name"
+            app:layout_constraintBottom_toBottomOf="@id/gradient"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintStart_toStartOf="@id/username" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

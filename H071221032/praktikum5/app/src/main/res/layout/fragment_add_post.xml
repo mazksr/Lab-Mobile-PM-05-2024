@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddPostFragment"
+    android:background="@color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_broken_image_24"
+        android:layout_marginTop="80dp"
+        android:paddingBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/note"
+        android:layout_width="352dp"
+        android:layout_height="280dp"
+        android:background="@drawable/rectangle"
+        android:elevation="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img"
+        />
+
+    <EditText
+        android:id="@+id/contentField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:elevation="31dp"
+        android:fontFamily="@font/hamon"
+        android:hint="Caption"
+        android:textSize="18sp"
+        android:gravity="top"
+        android:outlineProvider="none"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/note"
+        app:layout_constraintEnd_toEndOf="@+id/note"
+        app:layout_constraintStart_toStartOf="@+id/note"
+        app:layout_constraintTop_toTopOf="@id/note"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rectangle_black"
+        android:text="Submit"
+        android:fontFamily="@font/hamon_bold"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
